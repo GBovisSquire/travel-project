@@ -6,14 +6,26 @@ body {
   max-width: 1400px;
   margin: 0 auto;
 }
+main {
+  background-color: white;
+}
 section {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 100px 0;
 }
 .grid {
   display: grid;
-  grid-template-columns: 1fr 2fr 2fr;
   grid-gap: 64px;
+}
+.grid-2-columns {
+  grid-template-columns: 1fr 1fr;
+}
+.grid-3-col-first-narrow {
+  grid-template-columns: 1fr 2fr 2fr;
+}
+.img-responsive {
+  max-width: 100%;
 }
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
@@ -60,6 +72,33 @@ header a {
   color: #272044;
   text-decoration: none;
 }
+main h2 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 5px;
+  color: #272044;
+  opacity: 0.3;
+  text-transform: uppercase;
+}
+main h3 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.5;
+  letter-spacing: 5px;
+  color: #272044;
+  margin: 0;
+}
+main p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+
+  color: #272044;
+  opacity: 0.6;
+  margin: 0;
+}
 footer {
   background-image: linear-gradient(
       rgba(39, 32, 68, 0.9),
@@ -69,7 +108,6 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
-  padding: 100px 0;
 }
 footer h3 {
   font-weight: 700;
@@ -108,5 +146,12 @@ footer a {
   }
   header h3 {
     font-size: 12px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 32px;
+  }
+  section {
+    padding: 30px;
   }
 }
